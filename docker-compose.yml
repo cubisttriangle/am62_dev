@@ -1,0 +1,12 @@
+services:
+  env:
+    network_mode: "host"
+    image: "am62_dev"
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USER: ${USER:-0}
+        GROUP: ${GROUP:-0}
+        USER_ID: ${USER_ID:-0}
+        GROUP_ID: ${GROUP_ID:-0}
